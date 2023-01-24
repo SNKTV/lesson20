@@ -41,24 +41,27 @@ alert(three(+number, +count));
 
 // Завдання 4
 
-let metric = prompt('Введіть показник (\'m\' чи \'cm\')', '');
-let km = prompt('Скільки кілометрів?', '');
+const metric = prompt('Введіть показник m чи cm', '');
+const km = prompt('Введіть кількість кілометрів', '')
 
-function KmToM(m){
-    return `${km} кілометрів є ${km * 1000} m`;
+const KmToM = (m) => {
+    return `${km} кіломатерів дорівнює ${km * 1000} метрів`
 }
 
-function KmToCm(cm){
-    return `${km} кілометрів є ${km * 100000} cm`;
+const KmToCm = (cm) => {
+    return `${km} кілометрів дорівнює ${km * 100000} сантиметрів`
 }
 
-function getMetric(metric){
-    if(metric === 'm'){
+const getMetric = (metric) => {
+
+    if (metric === 'm') {
         return KmToM();
-    } else if(metric === 'cm'){
+    } else if (metric === 'cm') {
         return KmToCm();
+    } else {
+        return 'Ви вели не вірний показник'
     }
-    return `Ви ввели невірний показник`;
+    
 }
 
 alert(getMetric(metric, km, KmToM, KmToCm));
