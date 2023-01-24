@@ -44,11 +44,11 @@ alert(three(+number, +count));
 const metric = prompt('Введіть показник m чи cm', '');
 const km = prompt('Введіть кількість кілометрів', '')
 
-const KmToM = (m) => {
+const KmToM = () => {
     return `${km} кіломатерів дорівнює ${km * 1000} метрів`
 }
 
-const KmToCm = (cm) => {
+const KmToCm = () => {
     return `${km} кілометрів дорівнює ${km * 100000} сантиметрів`
 }
 
